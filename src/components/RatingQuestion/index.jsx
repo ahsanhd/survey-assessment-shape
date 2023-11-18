@@ -1,21 +1,16 @@
-import React from "react";
+import React, { memo } from "react";
 import "./index.styles.css";
-import { useNavigate } from "react-router-dom";
 import {
   Rating_Top_Title,
   Rating_Top_Prefix,
   Rating_Second_Title,
   Rating_Second_Prefix,
   Rating_Numbers,
-} from "../../data/surveyDataReady";
-const RatingQuestion = ({ handleInputChange }) => {
-  const navigate = useNavigate();
+} from "../../general/utils";
+import { useRatingQuestion } from "./index.hook";
 
-  const handleRatingChange = (rating) => {
-    handleInputChange("3", rating.toString());
-    navigate("/question/other-sources");
-  };
-
+const RatingQuestion = memo(({ handleInputChange }) => {
+  const handleRatingChange = useRatingQuestion(handleInputChange);
   return (
     <div className="form-group rating-container">
       <p className="title-label">
@@ -48,6 +43,6 @@ const RatingQuestion = ({ handleInputChange }) => {
       </div>
     </div>
   );
-};
+});
 
 export default RatingQuestion;

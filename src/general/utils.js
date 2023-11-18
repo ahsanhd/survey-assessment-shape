@@ -1,4 +1,4 @@
-import data from "./surveyData.json";
+import data from "./data/surveyData.json";
 /// First PAGE DATA
 export const Title_Screen_Data = data.first;
 export const Title_Content = Title_Screen_Data.headings[0];
@@ -40,4 +40,16 @@ export const Balance_Prefix = Balance_Data.headings[0].prefix;
 
 export const Balance_Options = Balance_Data.content.value;
 
-// console.log(Balance_Data.content.value);
+//// ERROR MESSAGES
+
+export const ERROR_MESSAGES = {
+  CHAR_LIMIT_REACH: "Character limit exceeded",
+};
+
+export const QUESTION_NUMBER = {
+  FIRST: "1",
+  SECOND: "2",
+  THIRD: "3",
+  FOURTH: "4",
+  FIFTH: "5",
+};

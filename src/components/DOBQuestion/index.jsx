@@ -1,75 +1,16 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import "./index.styles.css";
-import { DOB_Title, DOB_Prefix, DOB_Suffix } from "../../data/surveyDataReady";
+import { DOB_Title, DOB_Prefix, DOB_Suffix } from "../../general/utils";
+import { useDOBQuestion } from "./index.hook";
+import { memo } from "react";
 
-const DateOfBirthQuestion = ({ handleInputChange }) => {
-  const navigate = useNavigate();
-  const [formData, setFormData] = useState({
-    day: "",
-    month: "",
-    year: "",
-  });
-
-  const [errorMessages, setErrorMessages] = useState({
-    days: "",
-    months: "",
-    years: "",
-  });
-
-  const validateDate = () => {
-    const { day, month, year } = formData;
-    let errors = {
-      days: "",
-      months: "",
-      years: "",
-    };
-
-    const dayNumber = parseInt(day, 10);
-    const monthNumber = parseInt(month, 10);
-    const yearNumber = parseInt(year, 10);
-
-    if (isNaN(dayNumber) || dayNumber < 1 || dayNumber > 31) {
-      errors.days = "Number of days is incorrect";
-    }
-
-    if (isNaN(monthNumber) || monthNumber < 1 || monthNumber > 12) {
-      errors.months = "Number of months is incorrect";
-    }
-
-    if (isNaN(yearNumber) || yearNumber < 1920 || yearNumber > 2006) {
-      errors.years = "Number of years is incorrect";
-    }
-
-    setErrorMessages(errors);
-
-    return !errors.days && !errors.months && !errors.years;
-  };
-
-  const handleDateChange = (fieldName, value) => {
-    setFormData({
-      ...formData,
-      [fieldName]: value,
-    });
-  };
-
-  const handleOKButtonClick = () => {
-    if (validateDate()) {
-      // Date is valid, navigate to the next question
-      navigate("/question/rating");
-      const dateString = `${formData.day}-${formData.month}-${formData.year}`;
-      handleInputChange("2", dateString);
-    }
-  };
-
-  const handleEnterKeyPress = (e) => {
-    // Check if the Enter key is pressed
-    if (e.key === "Enter") {
-      // Perform the same action as the OK button
-      handleOKButtonClick();
-      // handleInputChange();
-    }
-  };
+const DateOfBirthQuestion = memo(({ handleInputChange }) => {
+  const {
+    errorMessages,
+    handleEnterKeyPress,
+    handleDateChange,
+    formData,
+    handleOKButtonClick,
+  } = useDOBQuestion(handleInputChange);
 
   return (
     <div
@@ -139,6 +80,6 @@ const DateOfBirthQuestion = ({ handleInputChange }) => {
       </div>
     </div>
   );
-};
+});
 
 export default DateOfBirthQuestion;

@@ -1,24 +1,15 @@
-import React from "react";
+import React, { memo } from "react";
 import "./index.styles.css";
-import { useNavigate } from "react-router-dom";
+
 import {
   Balance_Title,
   Balance_Prefix,
   Balance_Options,
-} from "../../data/surveyDataReady";
+} from "../../general/utils";
+import { useBalanceQuestion } from "./index.hook";
 
-const BalanceQuestion = ({
-  handleInputChange,
-  saveToLocalStorage,
-  saveToFile,
-}) => {
-  const navigate = useNavigate();
-
-  const handleClick = (option) => {
-    handleInputChange("5", option);
-
-    navigate("/thank-you");
-  };
+const BalanceQuestion = memo(({ handleInputChange }) => {
+  const handleClick = useBalanceQuestion(handleInputChange);
 
   return (
     <div className="form-group">
@@ -45,6 +36,6 @@ const BalanceQuestion = ({
       </ul>
     </div>
   );
-};
+});
 
 export default BalanceQuestion;

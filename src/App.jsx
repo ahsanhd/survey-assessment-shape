@@ -1,11 +1,17 @@
-import SurveyForm from "./pages/SurveyForm/index";
+import { Fragment, lazy } from "react";
 
-function App() {
+import { SuspenseWrapper } from "./layout/SuspenseWrapper";
+
+const SurveyForm = lazy(() => import("./pages/SurveyForm/index"));
+
+const App = () => {
   return (
-    <div className="App">
-      <SurveyForm />
-    </div>
+    <Fragment>
+      <SuspenseWrapper>
+        <SurveyForm />
+      </SuspenseWrapper>
+    </Fragment>
   );
-}
+};
 
 export default App;

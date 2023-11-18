@@ -1,15 +1,15 @@
 // components/TitleQuestion.js
-import React from "react";
+import React, { memo } from "react";
 import "./index.styles.css";
 
 import {
   Title_Prefix,
   Title_Heading,
   Drop_Down_Content,
-} from "../../data/surveyDataReady";
+} from "../../general/utils";
 import { useTitleQuestion } from "./index.hook";
 
-const TitleQuestion = ({ formData, setFormData }) => {
+const TitleQuestion = memo(({ formData, setFormData }) => {
   const { handleInputChange } = useTitleQuestion(formData, setFormData);
   return (
     <div className="form-group">
@@ -30,6 +30,6 @@ const TitleQuestion = ({ formData, setFormData }) => {
       </select>
     </div>
   );
-};
+});
 
 export default TitleQuestion;

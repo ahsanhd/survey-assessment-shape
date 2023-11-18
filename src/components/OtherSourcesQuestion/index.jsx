@@ -1,52 +1,22 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import "./index.styles.css";
 import {
   Other_Sources_Title,
   Other_Sources_Prefix,
   Other_Sources_Suffix,
   Other_Sources_CharLimit,
-} from "../../data/surveyDataReady";
+} from "../../general/utils";
+import { useOtherSourcesQuestion } from "./index.hook";
+import { memo } from "react";
 
-const CharLimit = 250;
-
-const OtherSourcesQuestion = ({ handleInputChange }) => {
-  const navigate = useNavigate();
-  const [inputValue, setInputValue] = useState(""); // State to track the input value
-  const [errorMessage, setErrorMessage] = useState(""); // State to store error message
-
-  const handleSkipButtonClick = () => {
-    navigate("/question/balance");
-  };
-
-  const handleOKButtonClick = () => {
-    if (validateCharacterLimit()) {
-      // Character limit is not exceeded, navigate to the next question
-      navigate("/question/balance");
-      handleInputChange("4", inputValue);
-    }
-  };
-
-  const handleEnterKeyPress = (e) => {
-    if (e.key === "Enter") {
-      handleOKButtonClick();
-    }
-  };
-
-  const handleInputChangeInternal = (value) => {
-    setInputValue(value);
-
-    // Clear the error message when the user starts typing
-    setErrorMessage("");
-  };
-
-  const validateCharacterLimit = () => {
-    if (inputValue.length > CharLimit) {
-      setErrorMessage("Character limit exceeded");
-      return false;
-    }
-    return true;
-  };
+const OtherSourcesQuestion = memo(({ handleInputChange }) => {
+  const {
+    errorMessage,
+    handleSkipButtonClick,
+    handleEnterKeyPress,
+    handleInputChangeInternal,
+    inputValue,
+    handleOKButtonClick,
+  } = useOtherSourcesQuestion(handleInputChange);
 
   return (
     <div className="form-group">
@@ -79,6 +49,6 @@ const OtherSourcesQuestion = ({ handleInputChange }) => {
       </div>
     </div>
   );
-};
+});
 
 export default OtherSourcesQuestion;

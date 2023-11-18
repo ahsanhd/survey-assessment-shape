@@ -1,11 +1,8 @@
-// ThankYou.js
-import React, { useEffect } from "react";
+import { memo } from "react";
+import { useThankYouScreen } from "./index.hook";
 
-const ThankYou = ({ saveToLocalStorage, saveToFile }) => {
-  useEffect(() => {
-    saveToLocalStorage();
-    saveToFile();
-  });
+const ThankYou = memo(({ saveToLocalStorage, saveToFile }) => {
+  useThankYouScreen(saveToLocalStorage, saveToFile);
   return (
     <div className="thank-you">
       <h1 className="thank-title">Thank You</h1>
@@ -14,6 +11,6 @@ const ThankYou = ({ saveToLocalStorage, saveToFile }) => {
       </p>
     </div>
   );
-};
+});
 
 export default ThankYou;
