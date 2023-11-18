@@ -1,4 +1,4 @@
-import SurveyForm from "./pages/SurveyForm";
+import SurveyForm from "./pages/SurveyForm/index";
 
 function App() {
   return (

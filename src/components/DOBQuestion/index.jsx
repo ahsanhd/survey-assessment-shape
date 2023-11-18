@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./DateOfBirthQuestion.css";
-import { DOB_Title, DOB_Prefix, DOB_Suffix } from "../data/surveyDataReady";
+import "./index.styles.css";
+import { DOB_Title, DOB_Prefix, DOB_Suffix } from "../../data/surveyDataReady";
 
 const DateOfBirthQuestion = ({ handleInputChange }) => {
   const navigate = useNavigate();

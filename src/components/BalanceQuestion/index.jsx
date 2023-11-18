@@ -1,11 +1,11 @@
 import React from "react";
-import "./BalanceQuestion.css";
+import "./index.styles.css";
 import { useNavigate } from "react-router-dom";
 import {
   Balance_Title,
   Balance_Prefix,
   Balance_Options,
-} from "../data/surveyDataReady";
+} from "../../data/surveyDataReady";
 
 const BalanceQuestion = ({
   handleInputChange,
@@ -16,8 +16,7 @@ const BalanceQuestion = ({
 
   const handleClick = (option) => {
     handleInputChange("5", option);
-    // saveToLocalStorage();
-    // saveToFile();
+
     navigate("/thank-you");
   };
 

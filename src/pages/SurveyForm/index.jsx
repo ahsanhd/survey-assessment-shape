@@ -1,13 +1,13 @@
 // SurveyForm.js
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import TitleQuestion from "../components/TitleQuestion";
-import DateOfBirthQuestion from "../components/DateOfBirthQuestion";
-import RatingQuestion from "../components/RatingQuestion";
-import OtherSourcesQuestion from "../components/OtherSourcesQuestion";
-import BalanceQuestion from "../components/BalanceQuestion";
-import ThankYou from "../components/ThankYou";
-import "./SurveyForm.css";
+import TitleQuestion from "../../components/TitleQuestion";
+import DateOfBirthQuestion from "../../components/DOBQuestion";
+import RatingQuestion from "../../components/RatingQuestion";
+import OtherSourcesQuestion from "../../components/OtherSourcesQuestion";
+import BalanceQuestion from "../../components/BalanceQuestion";
+import ThankYou from "../../components/ThankYouScreen";
+import "./index.styles.css";
 
 const SurveyForm = () => {
   const [formData, setFormData] = useState({

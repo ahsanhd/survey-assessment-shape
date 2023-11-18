@@ -1,23 +1,16 @@
 // components/TitleQuestion.js
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import "./TitleQuestion.css";
+import "./index.styles.css";
 
 import {
   Title_Prefix,
   Title_Heading,
   Drop_Down_Content,
-} from "../data/surveyDataReady";
+} from "../../data/surveyDataReady";
+import { useTitleQuestion } from "./index.hook";
 
 const TitleQuestion = ({ formData, setFormData }) => {
-  const navigate = useNavigate();
-  const handleInputChange = (sectionId, value) => {
-    setFormData({
-      ...formData,
-      [sectionId]: value,
-    });
-    navigate("question/date-of-birth");
-  };
+  const { handleInputChange } = useTitleQuestion(formData, setFormData);
   return (
     <div className="form-group">
       <label className="title-label">

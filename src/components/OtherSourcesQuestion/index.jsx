@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./OtherSourcesQuestion.css";
+import "./index.styles.css";
 import {
   Other_Sources_Title,
   Other_Sources_Prefix,
   Other_Sources_Suffix,
   Other_Sources_CharLimit,
-} from "../data/surveyDataReady";
+} from "../../data/surveyDataReady";
 
 const CharLimit = 250;
 

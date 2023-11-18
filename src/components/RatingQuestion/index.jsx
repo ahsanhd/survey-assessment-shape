@@ -1,6 +1,5 @@
-// components/RatingQuestion.js
 import React from "react";
-import "./RatingQuestion.css"; // Import your stylesheet for RatingQuestion
+import "./index.styles.css";
 import { useNavigate } from "react-router-dom";
 import {
   Rating_Top_Title,
@@ -8,12 +7,11 @@ import {
   Rating_Second_Title,
   Rating_Second_Prefix,
   Rating_Numbers,
-} from "../data/surveyDataReady";
+} from "../../data/surveyDataReady";
 const RatingQuestion = ({ handleInputChange }) => {
   const navigate = useNavigate();
 
   const handleRatingChange = (rating) => {
-    // Call the handleInputChange function with the selected rating
     handleInputChange("3", rating.toString());
     navigate("/question/other-sources");
   };
