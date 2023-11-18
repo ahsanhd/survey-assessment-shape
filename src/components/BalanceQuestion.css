@@ -17,6 +17,12 @@
   margin-top: 20px;
 }
 
+@media (max-width: 600px) {
+  .title-label {
+    padding: 1.25rem;
+  }
+}
+
 .options-list-item {
   display: flex;
   gap: 2rem;
@@ -29,6 +35,12 @@
   align-items: center;
   font-size: inherit;
   margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  .title-label {
+    padding: 1rem 1.25rem;
+  }
 }
 
 .clickable-option {
@@ -44,6 +56,12 @@
   border-radius: 0.8rem;
 }
 
+@media (max-width: 600px) {
+  .clickable-option {
+    font-size: 1.5rem;
+  }
+}
+
 .clickable-option:hover {
   text-decoration: underline;
 }
@@ -56,4 +74,10 @@
 }
 .option-text {
   font-size: 1.8rem;
+}
+
+@media (max-width: 600px) {
+  .option-text {
+    font-size: 1.25rem;
+  }
 }

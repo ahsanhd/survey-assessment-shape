@@ -2,8 +2,28 @@
   max-width: 50%;
   margin: 16rem auto;
   padding: 20px;
-
+  font-size: inherit;
   border-radius: 5px;
+}
+
+@media (max-width: 1200px) {
+  .survey-form-container {
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 900px) {
+  .survey-form-container {
+    max-width: 80%;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .survey-form-container {
+    max-width: 100%;
+    font-size: 1rem;
+  }
 }
 
 .form-group {
@@ -17,6 +37,12 @@
   margin-inline: -1rem;
   display: block;
   margin-bottom: 3rem;
+}
+
+@media (max-width: 600px) {
+  .title-label {
+    font-size: 1.5rem;
+  }
 }
 
 .textarea-input {
@@ -34,6 +60,12 @@
   background-color: rgb(147, 125, 142);
   padding-inline: 2rem;
   padding-block: 0.7rem;
+}
+
+@media (max-width: 600px) {
+  .title-label {
+    font-size: 1.12rem;
+  }
 }
 
 .radio-group {

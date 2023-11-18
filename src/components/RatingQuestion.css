@@ -40,6 +40,14 @@
   border: none;
 }
 
+@media (max-width: 600px) {
+  .radio-button-container {
+    min-width: 3.5rem;
+    font-size: 2rem;
+    height: 3.5rem;
+  }
+}
+
 .radio-input:checked + .radio-button-container {
   background-color: #007bff;
   border-color: #007bff;

@@ -5,7 +5,7 @@ const ThankYou = ({ saveToLocalStorage, saveToFile }) => {
   useEffect(() => {
     saveToLocalStorage();
     saveToFile();
-  }, [saveToFile, saveToLocalStorage]);
+  }, []);
   return (
     <div className="thank-you">
       <h1 className="thank-title">Thank You</h1>
