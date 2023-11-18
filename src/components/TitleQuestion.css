@@ -1,0 +1,14 @@
+.prefix-two {
+  display: inline-block;
+  height: 3.2rem;
+  font-size: 2rem;
+  border-radius: 50%;
+  width: 3.2rem;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  background-color: rgb(215, 208, 213);
+  color: rgb(114, 81, 102);
+  border: 2px solid rgb(215, 208, 213);
+  margin-right: 0.5rem;
+}

@@ -1,0 +1,65 @@
+.date-input-group {
+  display: flex;
+  gap: 2rem;
+  margin-left: 3rem;
+}
+
+.date-input::-webkit-inner-spin-button,
+.date-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+
+  .date-input {
+    -moz-appearance: textfield;
+    padding: 2rem;
+  }
+}
+
+.incorrect {
+  border-color: red;
+}
+
+.incorrect-date {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+}
+
+.date-input::placeholder {
+  color: var(--color-light--1);
+  padding-left: 0rem;
+}
+.date-input:focus {
+  background-color: rgb(147, 125, 142);
+}
+
+.ok-button {
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 1rem 3.5rem;
+  display: inline-block;
+  border-radius: 10rem;
+  margin-top: 6rem;
+  transition: all 0.2s ease 0s;
+  background-color: rgb(80, 60, 76);
+  color: rgb(242, 244, 255);
+  opacity: 80%;
+  border: none;
+}
+
+.ok-button:hover {
+  font-size: 1.5rem;
+  padding: 1rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  margin-top: 6rem;
+  background-color: var(--color-light--1);
+  color: rgb(80, 60, 76);
+}
+
+.or-press-enter {
+  margin-left: 0.8rem;
+  font-size: 1.5rem;
+}

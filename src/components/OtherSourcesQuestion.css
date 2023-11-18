@@ -1,0 +1,52 @@
+.char-limit {
+  color: rgb(242, 244, 255);
+  font-weight: 400;
+  margin-inline: 1rem 2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.text-box-container {
+  margin-inline-start: 4.5rem;
+  margin-block: 2rem;
+}
+
+.textarea-input {
+  box-sizing: border-box;
+  display: flex;
+  margin-block: 2rem;
+  font-size: 1.5rem;
+  resize: none;
+  outline: none;
+  border: none;
+  border-radius: 1.5rem;
+  width: 50%;
+  min-height: 14rem;
+  color: rgb(255, 255, 255);
+  background-color: rgb(147, 125, 142);
+  padding-inline: 2rem;
+  padding-block: 0.7rem;
+}
+
+.button-container {
+  text-align: end;
+}
+
+.skip-button {
+  color: rgb(242, 244, 255);
+  font-weight: 400;
+  margin-inline: 1rem 2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.error-message {
+  display: block;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  background-color: orangered;
+  padding: 1rem 1rem;
+  border-radius: 3rem;
+  color: wheat;
+  opacity: 70%;
+}

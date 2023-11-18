@@ -1,0 +1,128 @@
+.survey-form-container {
+  max-width: 50%;
+  margin: 16rem auto;
+  padding: 20px;
+
+  border-radius: 5px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.title-label {
+  font-size: 2rem;
+  color: rgb(242, 244, 255);
+  font-weight: 400;
+  margin-inline: -1rem;
+  display: block;
+  margin-bottom: 3rem;
+}
+
+.textarea-input {
+  box-sizing: border-box;
+  display: flex;
+  margin-block: 2rem;
+  font-size: 1.5rem;
+  resize: none;
+  outline: none;
+  border: none;
+  border-radius: 1.5rem;
+  width: 70%;
+  min-height: 14rem;
+  color: rgb(255, 255, 255);
+  background-color: rgb(147, 125, 142);
+  padding-inline: 2rem;
+  padding-block: 0.7rem;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  justify-content: flex-end;
+  row-gap: 1rem;
+}
+
+.radio-label {
+  margin-right: 10px;
+}
+
+.submit-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.button-area {
+  text-align: right;
+}
+.extra-info {
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  border: 2px solid rgb(242, 244, 255);
+  font-size: 1.1rem;
+  font-weight: 700;
+  height: 2em;
+  width: 2rem;
+  color: rgb(242, 244, 255);
+  background-color: transparent;
+  vertical-align: middle;
+  margin-inline-start: 1rem;
+}
+
+.date-input {
+  font-size: 1.5rem;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  border-radius: 2rem;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  background-color: rgb(147, 125, 142);
+  padding-inline: 2rem;
+  padding-block: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.select-input {
+  box-sizing: border-box;
+  display: flex;
+  margin-block: 2rem;
+  font-size: 1.5rem;
+  resize: none;
+  outline: none;
+  border: none;
+  border-radius: 1.5rem;
+  width: 70%;
+  min-height: 2rem;
+  color: rgb(255, 255, 255);
+  background-color: rgb(147, 125, 142);
+  padding-inline: 2rem;
+  padding-block: 0.7rem;
+}
+
+.thank-text {
+  font-size: 2rem;
+}
+
+.thank-title {
+  font-size: 3rem;
+}
